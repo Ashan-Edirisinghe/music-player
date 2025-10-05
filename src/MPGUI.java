@@ -46,7 +46,7 @@ private void GUIcomponents (){
         songProgress.setBackground(null);
         add(songProgress);
 
-
+       addPlaybackBtns();
 
 
 }
@@ -78,6 +78,53 @@ private void addToolbar(){
       add(toolbar);
 
 }
+
+private void addPlaybackBtns(){
+  JPanel  playbackBtns = new JPanel();
+    playbackBtns.setBounds(0, 435, getWidth() - 10, 80);
+    playbackBtns.setBackground(null);
+
+    // previous button
+    JButton prevButton = new JButton(loadimage("src/assets/previous.png"));
+    prevButton.setBorderPainted(false);
+    prevButton.setBackground(null);
+
+    playbackBtns.add(prevButton);
+
+    //play button
+
+    JButton playButton = new JButton(loadimage("src/assets/play.png"));
+    playButton.setBorderPainted(false);
+    playButton.setBackground(null);
+
+    playbackBtns.add(playButton);
+
+     // pause button
+    JButton pauseButton = new JButton(loadimage("src/assets/pause.png"));
+    pauseButton.setBorderPainted(false);
+    pauseButton.setBackground(null);
+    pauseButton.setVisible(false);
+
+    playbackBtns.add(pauseButton);
+
+        // next button
+
+    JButton nextButton = new JButton(loadimage("src/assets/next.png"));
+    nextButton.setBorderPainted(false);
+    nextButton.setBackground(null);
+
+    playbackBtns.add(nextButton);
+
+    add(playbackBtns);
+
+
+
+
+
+
+}
+
+
 
 private  ImageIcon loadimage(String imagepath) {
     try {
