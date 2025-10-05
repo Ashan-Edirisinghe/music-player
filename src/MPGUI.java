@@ -47,7 +47,7 @@ private void GUIcomponents (){
         add(songProgress);
 
 
-        
+
 
 }
 
